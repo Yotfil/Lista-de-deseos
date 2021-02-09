@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./src/style/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <script src="./src/script/script.js"></script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <main class="main">
+            <div class="form-contenedor">
+                <form id="formDeseos" class="form">
+                    <input type="text" class="form-input" id="inputInfo" placeholder="Escribe tu lista de deseos">
+                    <button type="submit" class="form-button">Agregar a la lista</button>
+                    <button class="limpiarTodo" type="button">
+                        <img src="./src/pics/trash.svg" alt="limpiar todo" id="limpiar" class="lista-icono">
+                        <small class="form-nota"> Limpiar todo</small>
+                    </button>
+                    <small class="form-nota" id="nota"></small>
+                </form>
+            </div>
+            <div class="cotenedor-lista">
+                <h2 class="lista-titulo">Lista de Deseos</h2>
+                <ul class="lista" id="contenedorLista">
+                    <!-- <li class="lista-items">
+                        <input type="text" class="lista-input" value="Teclado dividido" readonly>
+                        <div class="contenedor-iconos">
+                            <button class="lista-button">
+                                <img src="./src/pics/edit.svg" alt="" class="lista-icono">
+                            </button>
+                            <button class="lista-button">
+                                <img src="./src/pics/trash.svg" alt="" class="lista-icono">
+                            </button>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+
+        </main>
+
+    </body>
+
+</html>

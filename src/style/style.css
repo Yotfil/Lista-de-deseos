@@ -1,0 +1,214 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	font-family: "Advent Pro", sans-serif;
+	min-height: 100vh;
+	background: rgb(33, 7, 36);
+	background: linear-gradient(
+		118deg,
+		rgba(33, 7, 36, 1) 0%,
+		rgba(1, 27, 33, 1) 100%
+	);
+}
+.main {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1100px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+.cotenedor-lista,
+.form-contenedor {
+	width: 46%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	justify-content: center;
+	align-items: center;
+	top: 200px;
+	position: fixed;
+}
+.form-input,
+.lista-input {
+	border: none;
+	padding: 10px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	transition: all 0.4s ease-in-out;
+	font-family: "Advent Pro", sans-serif;
+	font-weight: 400;
+}
+.form-input {
+	width: 90%;
+	border-radius: 4px;
+	border: 2px solid transparent;
+	background-color: rgba(136, 88, 121, 0.05);
+	margin-bottom: 20px;
+	color: rgb(255, 163, 235);
+}
+.form-input::placeholder {
+	font-weight: 300;
+	color: rgb(249, 19, 176);
+}
+.form-input:focus {
+	border: 2px solid rgba(249, 19, 176, 0.2);
+	outline: transparent;
+	background-color: transparent;
+}
+.form-input:hover {
+	transition: all 0.4s ease-in-out;
+	border: 2px solid rgba(249, 19, 176, 0.2);
+	background-color: transparent;
+}
+.form-button {
+	border: none;
+	padding: 10px 0;
+	cursor: pointer;
+	color: rgb(255, 163, 235);
+	border: 2px solid rgba(249, 19, 176, 0.2);
+	border-radius: 4px;
+	width: 50%;
+	letter-spacing: 1px;
+	font-size: 16px;
+	position: relative;
+	background-color: transparent;
+	transition: all 0.4s ease-in-out;
+	outline: transparent;
+	font-family: "Advent Pro", sans-serif;
+	font-weight: 400;
+}
+.form-button:hover {
+	box-shadow: 0 0 20px rgba(255, 0, 183, 0.1);
+	color: white;
+	text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+.form-button::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 49.8%;
+	transform: translate(-50%, -50%);
+	width: 0;
+	height: 100%;
+	background-color: rgba(249, 19, 176, 0.2);
+	transition: all 0.4s ease-in-out;
+	/* border-radius: 4px; */
+}
+.form-button:hover::before {
+	width: 100%;
+	transition: all 0.4s ease-in-out;
+}
+.form-nota {
+	color: rgb(255, 0, 162);
+	margin-top: 10px;
+	letter-spacing: 1px;
+	height: 19px;
+}
+
+.cotenedor-lista {
+	flex-direction: column;
+	align-items: flex-start;
+	margin-top: 80px;
+}
+.lista,
+li,
+.lista-input {
+	width: 100%;
+}
+.lista-titulo {
+	margin-bottom: 80px;
+	font-size: 30px;
+	padding-left: 20px;
+	color: rgb(13, 254, 238);
+	text-shadow: 2px 2px 4px black;
+	text-shadow: 0px 0px 20px #2477a8;
+}
+li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lista-input {
+	font-size: 20px;
+	color: rgb(0, 185, 213);
+	background-color: transparent;
+	width: 85%;
+	margin-right: 40px;
+	border-bottom: 1px solid rgb(0, 185, 213);
+	outline: transparent;
+}
+
+.contenedor-iconos {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 15%;
+}
+.lista-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: transparent;
+}
+.lista-button:focus {
+	outline: transparent;
+}
+.lista-icono {
+	width: 24px;
+	/* margin: 0 10px; */
+}
+.limpiarTodo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	background-color: transparent;
+	border: none;
+	outline: transparent;
+	cursor: pointer;
+}
+.select {
+	background-color: rgba(0, 221, 255, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+	.main {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding: 10px;
+	}
+	.cotenedor-lista,
+	.form-contenedor {
+		width: 100%;
+	}
+	.form {
+		position: static;
+		width: 90%;
+		margin-top: 20px;
+	}
+	.cotenedor-lista {
+		margin-top: 40px;
+	}
+	.lista-titulo {
+		text-align: center;
+		width: 100%;
+	}
+	.lista-input {
+		width: 75%;
+		margin-right: 15px;
+	}
+}
